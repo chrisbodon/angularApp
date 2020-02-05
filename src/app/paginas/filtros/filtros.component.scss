@@ -1,0 +1,19 @@
+li {
+
+  img {
+    display: inline-block;
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    max-height: 150px;
+    margin: auto;
+    padding: 5px;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+  }
+
+}
