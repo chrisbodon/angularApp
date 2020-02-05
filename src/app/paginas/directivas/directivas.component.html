@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3 text-center">
+      <h1>Directivas</h1>
+      <dl class="text-left">
+        <dt>Components:</dt>
+        <dd>son directivas con una plantilla de html.</dd>
+        <dt>Estructurales:</dt>
+        <dd>cambian el DOM añdiendo o removiendo elementos, por ejemplo *ngIf.</dd>
+        <dt>Attribute directive:</dt>
+        <dd>cambian la apariencia de un elemento del DOM, por ejemplo NgStyle.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <p>Podemos crear, nuestras propias directivas, con el comando <code>ng g d nombreDirectiva</code>.</p>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <p appHello="#85AEE1">En este párrafo, estamos usando nuestra directiva <code>appHello</code>.</p>
+      <p appHello="#ffffff">En este párrafo, estamos usando nuestra directiva <code>appHello</code>.</p>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <p appSubrayar="rojo">Ejemplo de directiva <code>appSubrayar</code>.</p>
+      <p [appSubrayar]="'green'">Ejemplo de directiva <code>appSubrayar</code>.</p>
+      <p [appSubrayar]="colorSeleccionado">Ejemplo de directiva <code>appSubrayar</code>.</p>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="colors" [(ngModel)]="colorSeleccionado" value="pink" checked>
+          Rosa
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="colors" [(ngModel)]="colorSeleccionado" value="orange">
+          Naranja
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="colors" [(ngModel)]="colorSeleccionado" value="blue">
+          Azul
+        </label>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>

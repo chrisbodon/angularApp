@@ -7,48 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonComponent implements OnInit {
 
-  constructor() { }
+  //declarar variables  nombre: tipo
+  numero: number;
 
-  numero = 0;
+  constructor() { 
+    console.trace('BotonComponent constructor');
+    // incializan las variables
+    this.numero = 0;
+
+  }
 
   ngOnInit() {
-
-
+    console.trace('BotonComponent ngOnInit');
   }
 
-  sumar: true;
+  // funciones
 
-  operarNumeros = function () {
-    console.log("Hemos hecho click");
-    if (this.numero >= 0 && this.sumar == true) {
-
-      if (this.numero == 10) {
-
-        this.sumar = false;
-        this.numero--;
-
-      } else {
-
-        this.numero++;
-
-      }
-
-
-    } else {
-
-      if (this.numero == 0) {
-
-        this.sumar = true;
-        this.numero++;
-
-      } else {
-
-        this.numero--;
-
-      }
-
-
-    }
-  }
 
 }

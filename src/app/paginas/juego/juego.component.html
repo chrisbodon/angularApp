@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h1>Juego</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 text-center">
+      <hr>
+      <p>Nombre: <b>{{jugador}}</b></p>
+      <p><input type="text" [(ngModel)]="jugador"></p>
+      <a class="btn" href="javascript:void(0)" role="button" (click)="jugar()">Jugar</a>
+      <hr>
+      <p>Clicks: {{count}}</p>
+      <button [hidden]="!visible" class="btn" (click)="clickCount()">Pulsa aquí</button>
+      <hr>
+    </div>
+    <div class="col-lg-4 text-center">
+      <hr>
+      <h2>Ranking</h2>
+      <ul>
+        <li *ngFor="let item of jugadores | keyvalue"><b>{{item.key}}:</b> <span class="badge">{{item.value}}</span>
+        </li>
+      </ul>
+      <hr>
+    </div>
+  </div>
+</div>

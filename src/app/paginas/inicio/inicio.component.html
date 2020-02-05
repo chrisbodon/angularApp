@@ -1,1 +1,31 @@
-<p>inicio works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h1>Pagina de Inicio</h1>
+
+      <!--<h2>{{pokemon.name}}</h2>
+<img [src]="pokemon.sprites.front_default" alt="{{pokemon.name}}">
+
+{{ pokemon | json }}-->
+
+      <hr>
+      <a id="" class="btn" href="#" role="button" (click)="contarClicks()">Contar clicks</a>
+      <hr>
+
+      <p>Ejemplo de propiedad siempre con [] y las variables sin las llaves.</p>
+      <p>La propiedad [hidden] es de Angular, también podríamos haber usado un <code>*ngIf</code>.</p>
+      <p [hidden]="!visible">Adiós</p>
+      <button class="btn" (click)="decirAdios()">Decir adiós</button>
+      <hr>
+      <p [class]="claseSeleccionada">Color que cambia, al pulsar los botones.</p>
+
+      <button class="btn" (click)="claseSeleccionada='verde'">Verde</button>
+      <button class="btn" (click)="claseSeleccionada='rojo otra'">Rojo</button>
+      <hr>
+
+      <p>Para usar banana in a box, se debe importar FormsModule.</p>
+      <p>Nombre: {{jugador}}</p>
+      <p><input type="text" [(ngModel)]="jugador"></p>
+    </div>
+  </div>
+</div>

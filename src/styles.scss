@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #fff1ed;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.btn, .btn:focus {
+  background-color: #85AEE1;
+  color: #ffffff;
+  margin: 5px;
+  box-shadow: none;
+}
+
+.card {
+  margin: auto;
+  max-width: 300px;
+}

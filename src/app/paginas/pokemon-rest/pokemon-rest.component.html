@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <div *ngIf="mensaje" class="alert alert-primary" role="alert">
+        {{mensaje}}
+      </div>
+
+      <div class="card">
+        <img src="{{pokemon.imagen}}" class="card-img-top" alt="imagen pokemon">
+        <div class="card-body">
+          <h5 class="card-title">{{pokemon.id}} {{pokemon.nombre}}</h5>
+
+          <h3>Habilidades</h3>
+          <ol>
+            <li *ngFor="let h of pokemon.habilidades">{{h}}</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

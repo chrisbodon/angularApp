@@ -23,22 +23,22 @@
     {
       "id": 5,
       "nombre": "verde",
-      "hex": "#0f0"
+      "hex": "#0F0"
     },
     {
-      "nombre": "teal2",
-      "hex": "#FFFFFF",
+      "nombre": "teal",
+      "hex": "#00FFDD",
       "id": 6
     }
   ],
   "productos": [
     {
       "id": 1,
-      "title": "Café"
+      "nombre": "cafe"
     },
     {
       "id": 2,
-      "title": "leche"
+      "nombre": "leche"
     }
   ],
   "posts": [
