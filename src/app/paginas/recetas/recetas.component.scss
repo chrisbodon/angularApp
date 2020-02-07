@@ -1,0 +1,55 @@
+.form-check-input {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+.list-group-item {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.list-group-item.active {
+  background-color: #E1C276;
+  border-color: #E1C276;
+}
+
+.img-wrapper {
+  position: relative;
+  display: block;
+  margin: auto;
+  max-width: 500px;
+}
+
+.badge-pill {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 15px;
+  padding: 6px 7px;
+}
+
+.details {
+  color: #ff1515;
+}
+
+#food-card {
+  border: 2px solid #A88D43;
+  .row {
+    padding: 0px 15px;
+  }
+
+  h1 {
+    background-color: #A88D43;
+    color: #ffffff;
+    padding: 0px 10px 5px;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    padding: 0px 15px;
+  }
+
+
+}

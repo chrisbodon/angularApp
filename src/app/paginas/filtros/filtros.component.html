@@ -24,9 +24,29 @@
         <label for="">Filtrar lista por nombre: </label>
         <input type="search" class="form-control" id="" [(ngModel)]="busqueda" placeholder="Buscar por nombre">
       </div>
-      <ul class="list-group">
-        <li *ngFor="let item of animales | animalesFiltro: busqueda" class="list-group-item"><img src="{{item.Imagen}}" class="rounded-pill"> <span><b>{{item.Nombre}}</b><br>{{item.Observacion}}</span></li>
-      </ul>
+       <select [(ngModel)]="tipo">
+            <option selected>TODOS</option>
+            <option *ngFor="let t of tipos">{{t}}</option>
+        </select>
+        <br>
+        <div class="p-2">
+            {{tipos | json}}
+            tipo seleccionado {{tipo}}
+        </div>
+                       
+        <ul class="list-group">
+           
+            <li *ngFor="let animal of animales | animalesFiltro:busqueda:tipo"
+                class="list-group-item">
+                
+                    <img src="{{animal.Imagen}}" class="circle" /> 
+                    <div>
+                        <p class="nombre">{{animal.Nombre}}</p>            
+                        <p class="observacion">{{animal.Observacion}}</p>
+                    </div>    
+            </li>   
+           
+          </ul>
     </div>
   </div>
 </div>

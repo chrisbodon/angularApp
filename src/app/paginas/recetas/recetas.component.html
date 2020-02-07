@@ -1,0 +1,69 @@
+<div class="row mt-4">
+  <div class="col-lg-6">
+    <a href="javascript:void(0)">Cocinar nueva receta</a>
+  </div>
+  <div class="col-lg-6">
+    <div class="form-group">
+      <label class="form-check-label">
+        <b>Recetas sin gluten</b>
+        <input type="checkbox" class="form-check-input" [(ngModel)]="checkGluten">
+      </label>
+      <div class="input-group">
+        <input type="search" [(ngModel)]="busqueda" class="form-control" id=""
+          placeholder="Buscar receta por nombre, cocinero o ingredientes">
+        <div class="input-group-append">
+          <span class="input-group-text">
+            <span class="fa fa-search"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4">
+    <h2>Recetario</h2>
+    <ul class="list-group">
+      <li *ngFor="let r of recetas | recetaFiltro : checkGluten : busqueda" (click)="selecionarReceta(r)"
+        class="list-group-item {{ (r==recetaSeleccionada) ? 'active' : ''  }}">
+        <span *ngIf="!r.isGlutenFree" class="fab fa-font-awesome-flag badge badge-pill badge-danger"></span>
+        <span *ngIf="r.isGlutenFree" class="fab fa-font-awesome-flag badge badge-pill badge-success"></span>
+        <b>{{r.nombre}}</b><br><i>{{r.cocinero}}</i>
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-8">
+    <div id="food-card">
+      <h1>{{recetaSeleccionada.nombre}}</h1>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="img-wrapper">
+            <img src="{{recetaSeleccionada.foto}}" class="img-fluid">
+            <span *ngIf="!recetaSeleccionada.isGlutenFree"
+              class="fab fa-font-awesome-flag badge badge-pill badge-danger"></span>
+            <span *ngIf="recetaSeleccionada.isGlutenFree"
+              class="fab fa-font-awesome-flag badge badge-pill badge-success"></span>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 p-0">
+              <p class="details"><span class="fa fa-heart"></span> 24</p>
+            </div>
+            <div class="col-sm-8 p-0 text-right">
+              <p><i>By {{recetaSeleccionada.cocinero}}</i></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <h3>Ingredientes</h3>
+          <ul class="list-group">
+            <li class="list-group-item">patata</li>
+            <li class="list-group-item">bonito</li>
+            <li class="list-group-item">pimientos</li>
+            <li class="list-group-item">cebolla</li>
+          </ul>
+        </div>
+      </div>
+      <p class="description">{{recetaSeleccionada.descripcion}}</p>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ANIMALES } from 'src/app/animales';
+import { ANIMALES } from '../../animales';
+
 
 @Component({
   selector: 'app-filtros',
@@ -10,23 +11,25 @@ export class FiltrosComponent implements OnInit {
 
   coche: any;
   animales: Array<any>;
+  tipos: Array<string>;
+  tipo: string;
 
   constructor() {
-    console.trace('constructor');
-    this.coche = {
-      "nombre": "Audi R8",
-      "color": "blanco",
-      "isDiesel": false,
-      "precio": 10000
-    };
-
+    console.trace('FiltrosComponent constructor');
     this.animales = ANIMALES;
+    this.tipo = 'TODOS';
+    this.tipos = [...new Set (this.animales.map( (el) => el.Tipo ))];
+    this.coche = {
+                    'nombre': 'Audi r8',
+                    'color': 'blanco',
+                    'isDiesel': false,
+                    'precio': 100000.456
+                  };
 
-  } // constructor
+  }// constructor
 
   ngOnInit() {
-    console.trace('ngOnInit');
+    console.trace('FiltrosComponent ngOnInit');
+  }// ngOnInit
 
-  } // ngOnInit
-
-}
+}// FiltrosComponent

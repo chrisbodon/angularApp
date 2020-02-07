@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>error404</h1>
+      <p>El enlace que buscabas, no existe o no se encuentra disponible</p>
+      <ul>
+        <li *ngFor="let r of rutas">
+          <a [routerLink]="r.ruta" routerLinkActive="active">{{r.nombre}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,9 @@ import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.compon
 import { EstilosComponent } from './paginas/estilos/estilos.component';
 import { DirectivasComponent } from './paginas/directivas/directivas.component';
 import { FiltrosComponent } from './paginas/filtros/filtros.component';
+import { RecetasComponent } from './paginas/recetas/recetas.component';
+import { Error404Component } from './paginas/error404/error404.component';
+import { SaludarComponent } from './paginas/saludar/saludar.component';
 
 /**
  * Definir las rutas la app de angular
@@ -22,7 +25,60 @@ const routes: Routes = [
   { path: 'arrays', component: ArraysComponent},
   { path: 'estilos', component: EstilosComponent},
   { path: 'directivas', component: DirectivasComponent},
-  { path: 'filtros', component: FiltrosComponent}
+  { path: 'filtros', component: FiltrosComponent},
+  { path: 'recetas', component: RecetasComponent},
+  { path: 'saludar/:pNombre', component: SaludarComponent},
+  // En :pNombre, los puntos sirven para indicar que es un parámetro.
+
+  { path: '**', component: Error404Component}
+];
+
+export const RUTAS =  [
+  {
+      'ruta' : '/',
+      'nombre' : 'Inicio',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/productos',
+      'nombre' : 'Productos',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/juego',
+      'nombre' : 'Juego',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/arrays',
+      'nombre' : 'Arrays',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/pokemon',
+      'nombre' : 'Pokemon',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/estilos',
+      'nombre' : 'Sass',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/directivas',
+      'nombre' : 'Directivas',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/filtros',
+      'nombre' : 'Filtros',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/recetas',
+      'nombre' : 'Recetas',
+      'icono' : ''
+  }
 ];
 
 @NgModule({
