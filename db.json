@@ -2,6 +2,29 @@
   "colores": [
     {
       "id": 1,
+      "titulo": "Crear datos en JSON",
+      "completada": true
+    },
+    {
+      "id": 2,
+      "titulo": "Crear modelo con interfaz",
+      "completada": false
+    },
+    {
+      "id": 3,
+      "titulo": "Tomar café y descanso a las 10:30",
+      "completada": false
+    },
+    {
+      "id": 4,
+      "titulo": "Crear Provider",
+      "completada": false
+    }
+  ],
+
+  "colores": [
+    {
+      "id": 1,
       "nombre": "negro",
       "hex": "#000"
     },

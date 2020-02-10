@@ -12,6 +12,7 @@ import { FiltrosComponent } from './paginas/filtros/filtros.component';
 import { RecetasComponent } from './paginas/recetas/recetas.component';
 import { Error404Component } from './paginas/error404/error404.component';
 import { SaludarComponent } from './paginas/saludar/saludar.component';
+import { TareasComponent } from './paginas/tareas/tareas.component';
 
 /**
  * Definir las rutas la app de angular
@@ -27,8 +28,9 @@ const routes: Routes = [
   { path: 'directivas', component: DirectivasComponent},
   { path: 'filtros', component: FiltrosComponent},
   { path: 'recetas', component: RecetasComponent},
-  { path: 'saludar/:pNombre', component: SaludarComponent},
   // En :pNombre, los puntos sirven para indicar que es un parámetro.
+  { path: 'saludar/:pNombre', component: SaludarComponent},
+  { path: 'tareas', component: TareasComponent},
 
   { path: '**', component: Error404Component}
 ];
@@ -77,6 +79,11 @@ export const RUTAS =  [
   {
       'ruta' : '/recetas',
       'nombre' : 'Recetas',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/tareas',
+      'nombre' : 'Tareas',
       'icono' : ''
   }
 ];
