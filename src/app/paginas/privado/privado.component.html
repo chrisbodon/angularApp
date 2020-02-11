@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="text-danger">Zona privada</h1>
+      <p>Solo para usuarios logueados. Para tener acceso a esta ruta, debemos usar una guard y definirla en el routing.</p>
+      <code>path: 'privado', component: PrivadoComponent, canActivate: [LoginGuard]</code>
+      <dl>
+        <dt>canActivate</dt>
+        <dd>Guarda para indicar si se puede activar esa ruta.</dd>
+        <dt>LoginGuard</dt>
+        <dd>Guarda creada por nosotros, retorna true o false.</dd>
+      </dl>
+    </div>
+  </div>
+</div>

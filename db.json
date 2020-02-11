@@ -1,27 +1,21 @@
 {
-  "colores": [
+  "tareas": [
     {
       "id": 1,
-      "titulo": "Crear datos en JSON",
+      "titulo": "Entenderlo y consola.",
       "completada": true
     },
     {
-      "id": 2,
-      "titulo": "Crear modelo con interfaz",
-      "completada": false
-    },
-    {
       "id": 3,
-      "titulo": "Tomar café y descanso a las 10:30",
-      "completada": false
+      "titulo": "El eliminar mostrar al usuario ID y título de la tarea eliminada.",
+      "completada": true
     },
     {
-      "id": 4,
-      "titulo": "Crear Provider",
-      "completada": false
+      "id": 5,
+      "titulo": "Comprobar que titulo tarea nueva > 1.",
+      "completada": true
     }
   ],
-
   "colores": [
     {
       "id": 1,

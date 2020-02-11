@@ -1,0 +1,71 @@
+.todo-wrapper {
+  background-image: url('../../../assets/img/tarea.jpg');
+  padding: 100px 10px;
+}
+
+.inbox {
+  max-width: 800px;
+  padding: 0px;
+  margin: 40px auto;
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #D1E2FF;
+  cursor: pointer;
+  position: relative;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  .text-wrapper {
+    width: 100%;
+    border-left: 1px solid #D1E2FF;
+    padding: 20px;
+    margin: 0px;
+
+    input {
+      width: 100%;
+      max-width: 85%;
+    }
+  }
+
+  input,
+  b,
+  i {
+    margin-right: 5px;
+  }
+
+  input[type="checkbox"] {
+    margin: 20px;
+  }
+
+  i {
+    display: inline-block;
+    color: red;
+  }
+
+  .completada {
+    color: #4e4e4e;
+
+    b {
+      text-decoration: line-through;
+    }
+
+    i {
+      text-decoration: none;
+      color: green;
+    }
+  }
+
+  a.text-danger {
+    position: absolute;
+    right: 10px;
+  }
+}

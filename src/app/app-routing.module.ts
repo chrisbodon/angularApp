@@ -13,6 +13,9 @@ import { RecetasComponent } from './paginas/recetas/recetas.component';
 import { Error404Component } from './paginas/error404/error404.component';
 import { SaludarComponent } from './paginas/saludar/saludar.component';
 import { TareasComponent } from './paginas/tareas/tareas.component';
+import { PrivadoComponent } from './paginas/privado/privado.component';
+import { LoginGuard } from './guards/login.guard';
+import { LoginComponent } from './paginas/login/login.component';
 
 /**
  * Definir las rutas la app de angular
@@ -31,6 +34,9 @@ const routes: Routes = [
   // En :pNombre, los puntos sirven para indicar que es un parámetro.
   { path: 'saludar/:pNombre', component: SaludarComponent},
   { path: 'tareas', component: TareasComponent},
+  // Vamos a proteger esta ruta, con una guarda.
+  { path: 'privado', component: PrivadoComponent, canActivate: [LoginGuard]},
+  { path: 'login', component: LoginComponent},
 
   { path: '**', component: Error404Component}
 ];
@@ -84,6 +90,16 @@ export const RUTAS =  [
   {
       'ruta' : '/tareas',
       'nombre' : 'Tareas',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/privado',
+      'nombre' : 'Privado',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/login',
+      'nombre' : 'Login',
       'icono' : ''
   }
 ];

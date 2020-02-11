@@ -1,10 +1,33 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-lg-12">
       <h2>Tareas</h2>
       <p>Ejemplo de Provider o Servicio para hacer un CRUD completo, contra un servicio REST.</p>
 
-      {{ tareas | json }}
+      <!-- mensajes para el usuario -->
+      <div *ngIf="showMensaje" class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{mensaje}}
+        <button (click)="showMensaje = !showMensaje" type="button" class="close" data-dismiss="alert"
+          aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="todo-wrapper">
+        <input type="text" [(ngModel)]="tituloNuevo">
+        <a class="btn" href="javascript:void(0)" role="button" (click)="nuevaTarea()">Crear</a>
+        <ul class="inbox">
+          <li *ngFor="let tarea of tareas" (click)="modoEdicion = true" class="item">
+            <input type="checkbox" [checked]="tarea.completada" (click)="editarEstado(tarea)">
+            <p class="text-wrapper"><input type="text" [(ngModel)]="tarea.titulo"
+                (blur)="cambiarTitulo(tarea); modoEdicion = false" [disabled]="!modoEdicion"
+                class="titulo {{ (tarea.completada) ? 'completada' : '' }}" />
+            </p>
+            <a (click)="eliminar(tarea)" class="text-danger"><span class="fas fa-trash-alt"></span></a>
+          </li>
+        </ul>
+      </div>
+      <pre>{{ tareas | json }}</pre>
     </div>
 
   </div>
