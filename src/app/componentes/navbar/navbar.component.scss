@@ -5,6 +5,7 @@
 nav {
   background-color: #ef5350;
   box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+  padding: 0px;
 }
 
 .navbar-collapse {
@@ -19,6 +20,11 @@ nav {
 .navbar-brand {
   padding: 10px;
   margin: 0px;
+}
+
+.navbar-toggler {
+  padding: 16px;
+  border: 0px;
 }
 
 .navbar-light .navbar-nav .nav-link {
