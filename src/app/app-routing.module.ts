@@ -16,6 +16,7 @@ import { TareasComponent } from './paginas/tareas/tareas.component';
 import { PrivadoComponent } from './paginas/privado/privado.component';
 import { LoginGuard } from './guards/login.guard';
 import { LoginComponent } from './paginas/login/login.component';
+import { ComparadorComponent } from './paginas/comparador/comparador.component';
 
 /**
  * Definir las rutas la app de angular
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'recetas', component: RecetasComponent},
   // En :pNombre, los puntos sirven para indicar que es un parámetro.
   { path: 'saludar/:pNombre', component: SaludarComponent},
+  { path: 'comparador', component: ComparadorComponent},
   { path: 'tareas', component: TareasComponent},
   // Vamos a proteger esta ruta, con una guarda.
   { path: 'privado', component: PrivadoComponent, canActivate: [LoginGuard]},
@@ -85,6 +87,11 @@ export const RUTAS =  [
   {
       'ruta' : '/recetas',
       'nombre' : 'Recetas',
+      'icono' : ''
+  },
+  {
+      'ruta' : '/comparador',
+      'nombre' : 'Comparador',
       'icono' : ''
   },
   {
